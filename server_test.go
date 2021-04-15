@@ -1,4 +1,4 @@
-package main
+package doorbell
 
 import (
 	"io"
@@ -27,7 +27,6 @@ func TestPost(t *testing.T) {
 	   "subscription": "projects/myproject/subscriptions/mysubscription"
 	}
 	`
-	// event := `{ "message": "rrr", "subscription":"SSS"}`
 
 	reader := strings.NewReader(msg)
 	res, err := http.Post(ts.URL, "application/json", reader)
